@@ -17,4 +17,20 @@ export class AppController {
   callBackHdService() {
     return this.hdService.getHd()
   }
+  @Get('/provide-value')
+  provideValue() {
+    return this.hdService.getProvideValue()
+  }
+  @Get('/run-service')
+  runService() {
+    return this.hdService.getProdServiceConfig()
+  }
+  @Get('/db-service')
+  DbService() {
+    return this.hdService.getDbService()
+  }
+  @Get()
+  hello() {
+    return this.appService.findOne()
+  }
 }
