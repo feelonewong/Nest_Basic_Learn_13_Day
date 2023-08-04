@@ -1,14 +1,10 @@
-import { PrismaClient } from '@prisma/client';
-
-const primsa = new PrismaClient();
-async function run() {
-  await primsa.user.create({
-    data: {
-      email: '3078623@qq.com',
-      password: '123',
-      github: 'feelonewong@githu.com',
-    },
-  });
+import user from './seed/user';
+import category from './seed/category';
+import article from './seed/article';
+function run() {
+  user();
+  category();
+  article();
 }
 
 run();
