@@ -12,7 +12,7 @@ export class ConfigController {
   get() {
     return this.configService.get();
   }
-  @Get('/call-article')
+  @Get('/call-category.ts')
   call() {
     return this.articleService.article();
   }
